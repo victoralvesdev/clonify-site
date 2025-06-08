@@ -39,7 +39,7 @@ const Pricing = () => {
       monthlyPrice: "R$97",
       yearlyPrice: "R$970",
       yearlyMonthly: "R$81",
-      paymentLink: "https://pay.cakto.com.br/39dc6nq",
+      paymentLink: "https://pay.cakto.com.br/no7opqn_423231",
       features: [
         { text: "10 clonagens de páginas por mês" },
         { text: "3 domínios próprios" },
@@ -55,7 +55,7 @@ const Pricing = () => {
       monthlyPrice: "R$147",
       yearlyPrice: "R$1.470",
       yearlyMonthly: "R$123",
-      paymentLink: "https://pay.cakto.com.br/3eazfe6",
+      paymentLink: "https://pay.cakto.com.br/g6m57t5",
       features: [
         { text: "25 clonagens de páginas por mês" },
         { text: "6 domínios próprios" },
@@ -73,7 +73,7 @@ const Pricing = () => {
       monthlyPrice: "R$197",
       yearlyPrice: "R$1.970",
       yearlyMonthly: "R$164",
-      paymentLink: "https://pay.cakto.com.br/re582tv_386154",
+      paymentLink: "https://pay.cakto.com.br/35iuou3",
       features: [
         { text: "Clonagens ilimitadas" },
         { text: "25 domínios próprios" },
