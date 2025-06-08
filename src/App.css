@@ -1,0 +1,343 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(138, 43, 226, 0.6));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-light {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse-light {
+  animation: pulse-light 3s ease-in-out infinite;
+}
+
+/* Custom cursor trace */
+.cursor-trace {
+  pointer-events: none;
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(138, 43, 226, 0.5);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background-color 0.3s;
+  filter: blur(3px);
+  box-shadow: 0 0 15px 5px rgba(138, 43, 226, 0.3);
+}
+
+.cursor-trace::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Base styles */
+body {
+  background-color: rgba(10, 10, 15, 0.95); /* Slightly transparent to allow glow effects to show through */
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+  position: relative; /* Important for z-index stacking */
+}
+
+/* Hide default cursor on desktop */
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, input, select, textarea {
+    cursor: none;
+  }
+}
+
+/* Phantom theme colors */
+:root {
+  --phantom-purple: #9333EA;
+  --phantom-purple-light: #A855F7;
+  --phantom-purple-dark: #7928CA;
+  --phantom-black: #0a0a0f;
+  --phantom-black-light: #1a1a25;
+  --phantom-black-dark: #050508;
+}
+
+/* Gradient text */
+.phantom-gradient-text {
+  background: linear-gradient(to right, #A855F7, #9333EA, #7928CA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(26, 26, 37, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.btn-phantom {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--phantom-purple);
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-phantom:hover {
+  background-color: var(--phantom-purple-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.5);
+}
+
+.btn-phantom:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(147, 51, 234, 0.3);
+}
+
+.btn-phantom::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.btn-phantom:hover::after {
+  animation: btn-shine 1.5s ease;
+}
+
+@keyframes btn-shine {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translateX(-100%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translateX(100%);
+  }
+}
+
+.btn-phantom-outline {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--phantom-purple);
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: 2px solid var(--phantom-purple);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-phantom-outline:hover {
+  background-color: rgba(147, 51, 234, 0.1);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
+}
+
+/* Animated background size for gradient text */
+.bg-size-200 {
+  background-size: 200% 200%;
+}
+
+/* Pulse animation for elements */
+@keyframes pulse-light {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-light {
+  animation: pulse-light 3s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--phantom-black-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--phantom-black-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--phantom-purple-dark);
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(147, 51, 234, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+:focus {
+  outline: 2px solid var(--phantom-purple);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Improved accessibility for focus */
+:focus-visible {
+  outline: 2px solid var(--phantom-purple);
+  outline-offset: 2px;
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Improved image rendering */
+img {
+  image-rendering: auto;
+}
+
+/* Prevent text selection on interactive elements */
+button, a {
+  user-select: none;
+}
+
+/* Prevent iOS tap highlight */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improved form elements */
+input, textarea, select {
+  background-color: var(--phantom-black-light);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--phantom-purple);
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.2);
+}
+
+/* Placeholder styling */
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}

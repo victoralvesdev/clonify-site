@@ -1,0 +1,22 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+
+/favicon.ico
+  Cache-Control: public, max-age=86400, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/favicon.svg
+  Cache-Control: public, max-age=86400, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/logo-clonify.png
+  Cache-Control: public, max-age=86400, must-revalidate
+  Access-Control-Allow-Origin: *
+  Content-Type: image/png
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400, must-revalidate
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json 
